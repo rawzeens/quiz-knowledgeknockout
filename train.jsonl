@@ -1,0 +1,107 @@
+[
+    {
+        "instruction": "Write a function to reverse a string.",
+        "context": "Reversing a string means creating a new string that reads from end to start.",
+        "response": "def reverse_string(s):\n    return s[::-1]"
+    },
+    {
+        "instruction": "Create a function to check if a number is prime.",
+        "context": "A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
+        "response": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+    },
+    {
+        "instruction": "Implement a function to calculate the factorial of a number.",
+        "context": "The factorial of a non-negative integer is the product of all positive integers less than or equal to the number.",
+        "response": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)"
+    },
+    {
+        "instruction": "Write a function to find the maximum element in a list.",
+        "context": "Finding the maximum element involves scanning through the list to locate the highest value.",
+        "response": "def find_max(lst):\n    return max(lst)"
+    },
+    {
+        "instruction": "Create a function to check if a string is a palindrome.",
+        "context": "A palindrome is a string that reads the same forward and backward.",
+        "response": "def is_palindrome(s):\n    return s == s[::-1]"
+    },
+    {
+        "instruction": "Write a function to merge two sorted lists into a single sorted list.",
+        "context": "Merging involves combining two lists and ensuring the result remains sorted.",
+        "response": "def merge_sorted_lists(lst1, lst2):\n    return sorted(lst1 + lst2)"
+    },
+    {
+        "instruction": "Create a function to calculate the nth Fibonacci number.",
+        "context": "The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, starting from 0 and 1.",
+        "response": "def fibonacci(n):\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(n - 1):\n        a, b = b, a + b\n    return b"
+    },
+    {
+        "instruction": "Implement a function to count the number of occurrences of a character in a string.",
+        "context": "Counting occurrences involves determining how many times a specific character appears in a string.",
+        "response": "def count_char(s, char):\n    return s.count(char)"
+    },
+    {
+        "instruction": "Write a function to find the average of a list of numbers.",
+        "context": "The average is computed by summing the numbers and dividing by the count of numbers in the list.",
+        "response": "def average(lst):\n    return sum(lst) / len(lst) if lst else 0"
+    },
+    {
+        "instruction": "Create a function to find the largest prime factor of a number.",
+        "context": "Finding the largest prime factor involves breaking down a number into its prime factors and selecting the largest.",
+        "response": "def largest_prime_factor(n):\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n    return n"
+    },
+    {
+        "instruction": "Write a function to generate a list of prime numbers up to a given limit.",
+        "context": "Generating prime numbers up to a limit involves iterating through numbers and checking for primality.",
+        "response": "def primes_up_to(limit):\n    primes = []\n    for num in range(2, limit + 1):\n        if all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):\n            primes.append(num)\n    return primes"
+    },
+    {
+        "instruction": "Create a function to find the greatest common divisor (GCD) of two numbers.",
+        "context": "The GCD of two numbers is the largest number that divides both of them without leaving a remainder.",
+        "response": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a"
+    },
+    {
+        "instruction": "Write a function to implement a basic stack using a list.",
+        "context": "A stack is a data structure that follows the Last In First Out (LIFO) principle. Implementing it with a list involves basic stack operations.",
+        "response": "class Stack:\n    def __init__(self):\n        self.stack = []\n\n    def push(self, item):\n        self.stack.append(item)\n\n    def pop(self):\n        return self.stack.pop() if not self.is_empty() else None\n\n    def is_empty(self):\n        return len(self.stack) == 0\n\n    def peek(self):\n        return self.stack[-1] if not self.is_empty() else None"
+    },
+    {
+        "instruction": "Create a function to convert a binary tree to its mirror image.",
+        "context": "Mirroring a binary tree involves swapping the left and right children of each node.",
+        "response": "class TreeNode:\n    def __init__(self, value=0, left=None, right=None):\n        self.value = value\n        self.left = left\n        self.right = right\n\n    def mirror_tree(node):\n        if node:\n            node.left, node.right = node.right, node.left\n            mirror_tree(node.left)\n            mirror_tree(node.right)"
+    },
+    {
+        "instruction": "Write a function to find the longest common subsequence of two strings.",
+        "context": "The longest common subsequence is the longest sequence that can be derived from both strings by deleting some or none of the characters without changing the order of the remaining characters.",
+        "response": "def longest_common_subsequence(X, Y):\n    m, n = len(X), len(Y)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if X[i - 1] == Y[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    return dp[m][n]"
+    },
+    {
+        "instruction": "Implement a function to rotate an image represented by a 2D matrix 90 degrees clockwise.",
+        "context": "Rotating a 2D matrix 90 degrees clockwise involves re-arranging elements to shift columns into rows in reverse order.",
+        "response": "def rotate_matrix(matrix):\n    return [list(reversed(col)) for col in zip(*matrix)]"
+    },
+    {
+        "instruction": "Write a function to implement a basic calculator that can handle addition, subtraction, multiplication, and division.",
+        "context": "A basic calculator function should be able to parse and compute mathematical expressions with the four basic operations.",
+        "response": "def basic_calculator(s):\n    def calculate(tokens):\n        stack = []\n        num = 0\n        sign = '+'\n        while tokens:\n            token = tokens.pop(0)\n            if token.isdigit():\n                num = int(token)\n            if token in '+-*/' or not tokens:\n                if sign == '+':\n                    stack.append(num)\n                elif sign == '-':\n                    stack.append(-num)\n                elif sign == '*':\n                    stack[-1] *= num\n                elif sign == '/':\n                    stack[-1] = int(stack[-1] / num)\n                sign = token\n                num = 0\n        return sum(stack)\n\n    tokens = []\n    i = 0\n    while i < len(s):\n        if s[i].isdigit():\n            j = i\n            while j < len(s) and s[j].isdigit():\n                j += 1\n            tokens.append(s[i:j])\n            i = j\n        else:\n            if s[i] in '+-*/':\n                tokens.append(s[i])\n            i += 1\n    return calculate(tokens)"
+    },
+    {
+        "instruction": "Create a function to find the kth smallest element in an unsorted array.",
+        "context": "Finding the kth smallest element requires sorting or a more efficient method like a heap-based approach.",
+        "response": "import heapq\n\ndef kth_smallest(arr, k):\n    return heapq.nsmallest(k, arr)[-1]"
+    },
+    {
+        "instruction": "Write a function to find the maximum subarray sum using Kadane's algorithm.",
+        "context": "Kadane's algorithm efficiently finds the maximum sum of a contiguous subarray.",
+        "response": "def max_subarray_sum(arr):\n    max_sum = current_sum = arr[0]\n    for num in arr[1:]:\n        current_sum = max(num, current_sum + num)\n        max_sum = max(max_sum, current_sum)\n    return max_sum"
+    },
+    {
+        "instruction": "Create a function to implement a binary search algorithm on a sorted list.",
+        "context": "Binary search is an efficient algorithm for finding an item from a sorted list by repeatedly dividing the search interval in half.",
+        "response": "def binary_search(lst, target):\n    left, right = 0, len(lst) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1"
+    },
+    {
+        "instruction": "Implement a function to count the number of vowels in a string.",
+        "context": "Counting vowels involves identifying and summing up occurrences of vowel characters (a, e, i, o, u) in a string.",
+        "response": "def count_vowels(s):\n    return sum(1 for char in s if char.lower() in 'aeiou')"
+    }
+]

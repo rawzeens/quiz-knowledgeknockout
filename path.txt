@@ -1,0 +1,34 @@
+/quiz_app
+|-- index.php                  # The home page (could redirect to login or dashboard)
+|-- login.php                  # Login page (shared)
+|-- register.php               # Registration page (shared)
+|-- logout.php                 # Logout script (shared)
+|-- dashboard.php              # Student dashboard
+|-- teacher_dashboard.php      # Teacher/admin dashboard
+|-- profile.php                # User profile management (shared)
+|-- manage_quizzes.php         # Manage quizzes page for teachers
+|-- create_quiz.php            # Create quiz page
+|-- edit_quiz.php              # Edit quiz page
+|-- delete_quiz.php            # Delete quiz script
+|-- manage_questions.php       # Manage questions page for teachers
+|-- create_question.php        # Create question page
+|-- edit_question.php          # Edit question page
+|-- delete_question.php        # Delete question script
+|-- quizzes.php                # List of available quizzes (for students)
+|-- quiz.php                   # Quiz taking page (for students)
+|-- quiz_results.php           # Display results after quiz completion (for students)
+|-- quiz_details.php           # Detailed view of a quiz attempt (for students)
+|-- view_results.php           # View results of students' quizzes (for teachers)
+|-- student_performance.php     # Detailed view of a student's performance (for teachers)
+|-- quiz_statistics.php        # Quiz statistics page (for teachers)
+|-- functions.php              # Reusable functions (shared)
+|-- db_connection.php          # Database connection script (shared)
+|-- config.php                 # Configuration file (shared)
+|-- error.php                  # Error page (shared)
+|-- forgot_password.php        # Password reset page (shared)
+|-- terms.php                  # Terms of service (shared)
+|-- privacy.php                # Privacy policy (shared)
+|-- /css
+|   |-- styles.css             # CSS styles (shared)
+|-- /js
+|   |-- scripts.js             # JavaScript functions (shared)

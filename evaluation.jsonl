@@ -1,0 +1,86 @@
+[
+    {
+        "model_input": "Write a function to reverse a string.",
+        "target_output": "The function should correctly reverse a string. For example, reverse_string('hello') should return 'olleh'. The response uses Python slicing to reverse the string, which is efficient and correct."
+    },
+    {
+        "model_input": "Create a function to check if a number is prime.",
+        "target_output": "The function should correctly determine if a number is prime. The given solution checks for factors up to the square root of the number, which is efficient. For example, is_prime(7) should return True, while is_prime(4) should return False."
+    },
+    {
+        "model_input": "Implement a function to calculate the factorial of a number.",
+        "target_output": "The function should correctly calculate the factorial using recursion. For example, factorial(5) should return 120. The provided solution handles both the base case and the recursive case correctly."
+    },
+    {
+        "model_input": "Write a function to find the maximum element in a list.",
+        "target_output": "The function should return the maximum value in a list of numbers. For example, find_max([1, 2, 3, 4]) should return 4. The response uses Python's built-in max function, which is optimal for this task."
+    },
+    {
+        "model_input": "Create a function to check if a string is a palindrome.",
+        "target_output": "The function should correctly identify if a string is a palindrome. For example, is_palindrome('racecar') should return True, while is_palindrome('hello') should return False. The response uses slicing to compare the string with its reverse, which is efficient."
+    },
+    {
+        "model_input": "Write a function to merge two sorted lists into a single sorted list.",
+        "target_output": "The function should merge two sorted lists into one sorted list. For example, merge_sorted_lists([1, 3], [2, 4]) should return [1, 2, 3, 4]. The response uses Python's sorted function on the concatenated lists, which is simple and effective."
+    },
+    {
+        "model_input": "Create a function to calculate the nth Fibonacci number.",
+        "target_output": "The function should return the nth Fibonacci number using iteration. For example, fibonacci(5) should return 5. The response correctly implements the iterative approach, which is efficient for this task."
+    },
+    {
+        "model_input": "Implement a function to count the number of occurrences of a character in a string.",
+        "target_output": "The function should count how many times a specific character appears in a string. For example, count_char('hello', 'l') should return 2. The response uses Python's count method, which is optimal for this task."
+    },
+    {
+        "model_input": "Write a function to find the average of a list of numbers.",
+        "target_output": "The function should calculate the average of a list of numbers. For example, average([1, 2, 3, 4]) should return 2.5. The response correctly handles both the sum and division, and also checks for an empty list."
+    },
+    {
+        "model_input": "Create a function to find the largest prime factor of a number.",
+        "target_output": "The function should return the largest prime factor of a number. For example, largest_prime_factor(28) should return 7. The response implements an efficient method using trial division."
+    },
+    {
+        "model_input": "Write a function to generate a list of prime numbers up to a given limit.",
+        "target_output": "The function should return a list of all prime numbers up to the specified limit. For example, primes_up_to(10) should return [2, 3, 5, 7]. The response uses a simple prime-checking loop, which is correct but could be optimized with the Sieve of Eratosthenes."
+    },
+    {
+        "model_input": "Create a function to find the greatest common divisor (GCD) of two numbers.",
+        "target_output": "The function should return the GCD of two numbers using the Euclidean algorithm. For example, gcd(8, 12) should return 4. The response correctly implements this algorithm, which is efficient and reliable."
+    },
+    {
+        "model_input": "Write a function to implement a basic stack using a list.",
+        "target_output": "The function should implement a stack with push, pop, is_empty, and peek operations. The response uses a class to manage the stack and handles edge cases like popping from an empty stack."
+    },
+    {
+        "model_input": "Create a function to convert a binary tree to its mirror image.",
+        "target_output": "The function should convert a binary tree to its mirror image by swapping left and right children recursively. The response correctly handles the recursion and swaps the nodes as required."
+    },
+    {
+        "model_input": "Write a function to find the longest common subsequence of two strings.",
+        "target_output": "The function should return the length of the longest common subsequence between two strings using dynamic programming. For example, longest_common_subsequence('abc', 'ac') should return 2. The response correctly implements this using a 2D table."
+    },
+    {
+        "model_input": "Implement a function to rotate an image represented by a 2D matrix 90 degrees clockwise.",
+        "target_output": "The function should rotate a 2D matrix 90 degrees clockwise. The response correctly uses a combination of zip and reversed functions to achieve the desired rotation."
+    },
+    {
+        "model_input": "Write a function to implement a basic calculator that can handle addition, subtraction, multiplication, and division.",
+        "target_output": "The function should evaluate mathematical expressions involving addition, subtraction, multiplication, and division. The response correctly handles tokenization and evaluation, using a stack to manage intermediate results."
+    },
+    {
+        "model_input": "Create a function to find the kth smallest element in an unsorted array.",
+        "target_output": "The function should return the kth smallest element in an unsorted array. For example, kth_smallest([3, 1, 2, 4], 2) should return 2. The response uses a heap-based approach, which is efficient for this problem."
+    },
+    {
+        "model_input": "Write a function to find the maximum subarray sum using Kadane's algorithm.",
+        "target_output": "The function should return the maximum sum of a contiguous subarray using Kadane's algorithm. For example, max_subarray_sum([-2,1,-3,4,-1,2,1,-5,4]) should return 6. The response correctly implements this algorithm."
+    },
+    {
+        "model_input": "Create a function to implement a binary search algorithm on a sorted list.",
+        "target_output": "The function should return the index of the target element in a sorted list using binary search. For example, binary_search([1, 2, 3, 4, 5], 3) should return 2. The response implements binary search efficiently with correct handling of edge cases."
+    },
+    {
+        "model_input": "Implement a function to count the number of vowels in a string.",
+        "target_output": "The function should return the number of vowels (a, e, i, o, u) in a string. For example, count_vowels('hello') should return 2. The response correctly counts the vowels using a generator expression."
+    }
+]
